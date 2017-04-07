@@ -1,6 +1,8 @@
 from django.http import JsonResponse
 from django.shortcuts import reverse
 
+from cabot.cabotapp.models import Service
+
 
 def hipchat_descriptor(request):
     descriptor_url = request.build_absolute_uri(reverse('hipchat-descriptor'))
