@@ -51,8 +51,8 @@ def hipchat_glance(request):
     worst_status = (Service.objects.filter(overall_status='CRITICAL') \
         or Service.objects.filter(overall_status='ERROR') \
         or Service.objects.filter(overall_status='WARNING') \
-        or Service.objects.filter(overall_status='PASSING'))
-    if worst_status.exists():
+        or Service.objects.filter(overall_status='PASSING')).first()
+    if worst_status:
         worst_status = worst_status.overall_status
     else:
         worst_status = None
