@@ -30,8 +30,8 @@ def hipchat_descriptor(request):
                   "key": "cabot-glance",
                   "target": "cabot-sidebar",
                   "icon": {
-                      "url": "",
-                      "url@2x": ""
+                      "url": "https://hipchat.com/img/connect.png",
+                      "url@2x": "https://hipchat.com/img/connect.png"
                   },
                   "conditions": [
                   ]
